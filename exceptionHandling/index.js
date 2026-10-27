@@ -1,17 +1,17 @@
 // You can throw exceptions using the throw statement and handle them using the try...catch & finally statements.
 
 // syntax:
-throw expression;
+// throw expression;
 
 // e.g:
-throw "Error2"; // String type
-throw 42; // Number type
-throw true; // Boolean type
-throw {
-  toString() {
-    return "I'm an object!";
-  },
-};
+// throw "Error2"; // String type
+// throw 42; // Number type
+// throw true; // Boolean type
+// throw {
+//   toString() {
+//     return "I'm an object!";
+//   },
+// };
 
 // syntax:
 try {
@@ -29,7 +29,8 @@ try {
 // e.g:
 try {
   // statements to try
-  let result = 10 / 0;
+  // let result = 10 / 0;
+  // func ko as an obj run krna hota h so we use new.
   throw new Error("An error occurred");
 } catch (err) {
   // statements to handle the error,

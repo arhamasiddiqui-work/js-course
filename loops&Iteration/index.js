@@ -66,7 +66,7 @@ function ReturnProperties_Values(obj, objName) {
 }
 ReturnProperties_Values({ a: 1, b: 2, c: 3 }, "object");
 
-// for of:
+// for of: for obj
 // syntax:
 for (variable of iterable)  // iterable means an object that can be iterated over
   statement

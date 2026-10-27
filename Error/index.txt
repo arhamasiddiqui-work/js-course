@@ -1,0 +1,16 @@
+  Each error is an object based upon the Error object, and has a name and a message.
+
+
+ frquently used error types: ERROR LIST
+    Error	        MDN wording	          Simple meaning
+    SyntaxError	 Unexpected token,    	Code syntax is invalid.
+    SyntaxError	 JSON.parse: bad parsing,	       The text isn't valid JSON.
+    ReferenceError	"x" is not defined,	  You used a variable that doesn't exist in scope.
+    TypeError	"x" is not a function,	  You tried to call something that isn't a function.
+    TypeError	null/undefined has no properties,	You tried to access a property on null or undefined.
+    TypeError	 "x" is not iterable,	    You tried to loop over or unpack a value that isn't iterable.
+    RangeError	Invalid array length,	You used an invalid array length.
+    InternalError	 too much recursion, 	A function keeps calling itself too deeply.
+    RangeError — occurs when a value is outside the allowed range.
+
+

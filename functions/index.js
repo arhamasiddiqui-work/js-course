@@ -31,7 +31,7 @@ console.log(Arr[0]); // 35
 
 // function expression: used to define a function inside an expression, can also use function declaration instead
 // syntax:
-//  const expression= function (parameters) {statements}
+//  const variable= function (parameters) {statements}
 const getRectArea = function (width, height) {
   return width * height;
 };
@@ -72,6 +72,7 @@ function sayHello() {
     console.log("Hello");
   };
 }
+// sayHello()()
 
 // Arrow function expressions should only be used for non-method functions because they do not have their own this, cant be used as constructor
 const obj = {
@@ -103,3 +104,43 @@ const double = arr.map((v) => v * 2); //map()->changes each item in an array int
 
 const sorted = arr.sort((a, b) => a - b);
 // [23, 18, 13, 6, 5, 1, 0]
+
+// Using call(), bind(), and apply(): by using call(), bind(), and apply(), we can change the value of "this" in a function
+//call(): Calls the function immediately, allowing you to set its this value and pass arguments individually
+// apply(): Same as call(), but passes arguments as an array
+// bind(): creates a new function with a fixed this value, which you can call later
+const objExample = {
+  num: 100,
+};
+// Setting "num" on globalThis to show how it is NOT used.
+globalThis.num = 42;
+
+// A traditional function to operate on "this"
+function add(a, b, c) {
+  return this.num + a + b + c;
+}
+console.log(add.call(objExample, 1, 2, 3)); // 106
+console.log(add.apply(objExample, [1, 2, 3])); // 106
+const boundAdd = add.bind(objExample);
+console.log(boundAdd(1, 2, 3)); // 106
+
+// with arrow function:
+const add2 = (a, b, c) => this.num + a + b + c;
+console.log(add2.call(objExample, 1, 2, 3));
+console.log(add2.apply(objExample, [1, 2, 3]));
+console.log(add2.bind(objExample)(1, 2, 3));
+
+const random = {
+  count: 10,
+  // The method syntax binds "this" to the "obj" context.
+  doSomethingLater() {
+    // Since the arrow function doesn't have its own binding and
+    // setTimeout (as a function call) doesn't create a binding itself, the "obj" context of the outer method is used.
+    setTimeout(() => {
+      this.count++;
+      console.log(this.count);
+    }, 200);
+  },
+};
+random.doSomethingLater();  // 11
+

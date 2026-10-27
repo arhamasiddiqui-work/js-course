@@ -8,7 +8,7 @@ const sales = "Toyota";
 function carTypes(name) {
   return name === "Honda" ? name : `Sorry, we don't sell ${name}.`;
 }
-const car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
+const car = { myCar: "Saturn", getCar:carTypes("Honda"), special: sales };
 console.log(car.myCar); // Saturn
 console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
@@ -22,8 +22,7 @@ const todos = [
 ];
 const progress = { javascript: 20, html: 50, css: 10 };
 
-print`I need to do:
+console.log(`I need to do:
 ${todos}
-My current progress is: ${progress}
-`;
-// print(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, progress);
+My current progress is: ${progress}`);
+// console.log(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, progress);

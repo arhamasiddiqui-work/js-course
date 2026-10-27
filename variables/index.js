@@ -3,6 +3,9 @@
 const name = "JS";
 console.log(name);
 
+// const y=new String('yellow')
+
+
 // Declaration and initialization
  /*a statement like let x = 42, the let x part is called a declaration, and the = 42 part is called an initializer, whereas const declarations always need an initializer*/
 let x = 42;
@@ -23,6 +26,7 @@ parseInt("101", 2); // 5 , Converts the binary string "101" (base 2-> radix: the
 parseFloat("3.14"); // 3.14, 
 const e = new Number("123"); // a === 123 is false
 const b = Number("123"); // b === 123 is true
+// object checking;
 e instanceof Number; // is true
 b instanceof Number; // is false
 typeof e; // "object"

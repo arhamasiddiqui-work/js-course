@@ -3,6 +3,7 @@
 
  frquently used error types: ERROR LIST
     Error	        MDN wording	          Simple meaning
+    
     SyntaxError	 Unexpected token,    	Code syntax is invalid.
     SyntaxError	 JSON.parse: bad parsing,	       The text isn't valid JSON.
     ReferenceError	"x" is not defined,	  You used a variable that doesn't exist in scope.

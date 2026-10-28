@@ -1,0 +1,5 @@
+
+ basic example:
+{} needs an explicit return; () => value returns automatically.
+const a = () => { return "Hello"; };
+const b = () => "Hello"; // Same result

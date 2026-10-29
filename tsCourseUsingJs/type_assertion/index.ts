@@ -6,6 +6,12 @@ const myCanvas1 = document.getElementById("myCanvas") as HTMLCanvasElement;
 // can also use the angle-bracket syntax
 const myCanvas2 = <HTMLCanvasElement>document.getElementById("myCanvas");
 
+
+const variable: string = "123";
+const variable2 = variable as unknown as number;  //changing type
+
+
+
 // Type assertions example:
 // const x="hello" as number;  //Conversion of type 'string' to 'number' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first
 
